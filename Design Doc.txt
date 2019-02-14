@@ -1,0 +1,26 @@
+General Structure of Project:
+
+Create Card Object which represents a card, containing a value and a suite.
+
+Create Deck Object which represents a deck of cards, can contain any number of cards, and has methods to shuffle, draw, put on top, put in middle, and put on bottom. Also will have method to generate new 52 card deck and to access any card in any position on the deck.
+
+Create HighCard function which will create and initialize a standard 52 card deck, then play High Cards for the players.
+    Menu will be:
+        "        HIGH CARD        "
+        "It's High Noon Somewhere!"
+        "1. Start new game"
+        "2. Quit to main menu"
+    High Card Rules:
+    Suites don't matter for calculating the victor.
+    Aces count as a value of one.
+    Ties will result in another card being drawn WITHOUT shuffling the deck.
+        "Press 'D' to draw new card..."
+    If there are no more cards to draw (highly unlikely but theoretically possible), game will declare a draw between both players.
+    At the end of the game, players will be given option to restart the game or to return to menu.
+    On game restart, deck is reinitialized to standard 52 card deck. Game plays as normal.
+
+Create main function, which will prompt player with a menu on which game they want to play, then call the appropriate function.
+    Menu will be:
+        "     CARDS: THE GAME     "
+        "1. Play High Card"
+        "2. Quit to desktop"
