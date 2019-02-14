@@ -33,6 +33,7 @@ namespace KingsisleTest
         public Deck(Deck deckToCopy) // initialize a Deck based off of another deck (essentially a copy)
         {
             m_cards = new List<Card>();
+            m_cards.AddRange(deckToCopy.m_cards);
         }
 
         public bool SetDeck(Decks deckEnum) // sets a deck to one of the standards in the enum Decks by calling the relevant method
