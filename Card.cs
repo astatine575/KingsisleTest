@@ -8,69 +8,74 @@ namespace KingsisleTest
 {
     class Card
     {
-        public enum Values { UNINITIALIZED = 0,
-                      ACE = 1,
-                      TWO = 2,
-                      THREE = 3,
-                      FOUR = 4,
-                      FIVE = 5,
-                      SIX = 6,
-                      SEVEN = 7,
-                      EIGHT = 8,
-                      NINE = 9,
-                      TEN = 10,
-                      JACK = 11,
-                      QUEEN = 12,
-                      KING = 13,
-                      MAXVALUE
+        public enum Values {
+            UNINITIALIZED = 0,
+
+            ACE = 1,
+            TWO = 2,
+            THREE = 3,
+            FOUR = 4,
+            FIVE = 5,
+            SIX = 6,
+            SEVEN = 7,
+            EIGHT = 8,
+            NINE = 9,
+            TEN = 10,
+            JACK = 11,
+            QUEEN = 12,
+            KING = 13,
+
+            MAXVALUE
         };
 
         public enum Suites
         {
             UNINITIALIZED = 0,
+
             HEARTS,
             DIAMONDS,
             CLUBS,
             SPADES,
+
             MAXVALUE
         };
 
         protected Values m_value;
         protected Suites m_suite;
 
-        Card()
+        public Card()
         {
             m_value = Values.UNINITIALIZED;
             m_suite = Suites.UNINITIALIZED;
         }
 
-        Card(Values value, Suites suite)
+        public Card(Values value, Suites suite)
         {
             m_value = value;
             m_suite = suite;
         }
 
-        public Values getValue()
+        public Values GetValue()
         {
             return m_value;
         }
 
-        public void setValue(Values value)
+        public void SetValue(Values value)
         {
             m_value = value;
         }
 
-        public Suites getSuite()
+        public Suites GetSuite()
         {
             return m_suite;
         }
 
-        public void setSuite(Suites suite)
+        public void SetSuite(Suites suite)
         {
             m_suite = suite;
         }
 
-        public String toString()
+        override public String ToString()
         {
             String value;
             switch(m_value)
