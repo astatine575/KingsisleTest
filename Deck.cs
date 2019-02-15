@@ -66,6 +66,11 @@ namespace KingsisleTest
             m_cards.Clear();
         }
 
+        public bool IsEmpty() // returns true if deck is empty, false otherwise
+        {
+            return m_cards.Count == 0;
+        }
+
         public void ShuffleDeck() // shuffles the deck based on Fisher-Yates shuffle
         {
             Random random = new Random();
@@ -85,7 +90,7 @@ namespace KingsisleTest
 
         public void InsertCard(Card card, int i) // insert a card after the i'th card of the deck
         {
-            if (i < 0 || i >= m_cards.Count)
+            if (i < 0 || i > m_cards.Count)
             {
                 Debug.WriteLine("inserting at out of bound card " + i + "");
                 throw new IndexOutOfRangeException();
